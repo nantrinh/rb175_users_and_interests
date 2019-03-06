@@ -1,0 +1,11 @@
+<p><%= @title %></p>
+<p>Email: <%= @user[:email] %></p>
+<p>Interests: <%= @user[:interests].join(', ') %></p>
+
+<p>Other Users:
+  <ul>
+  <% @other_names.each do |name| %>
+      <li><a href="/user/<%= name %>"><%= name %></a></li>
+  <% end %>
+  </ul>
+</p>
